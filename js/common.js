@@ -16,12 +16,24 @@ $(function () {
 
 //Show and hide searchform onclick
 $('.search-btn').on('click', function(){
-	if ($('.search-field').is(':visible') && !$('.search-field').hasClass('visible')) {
-		return false;
-	} else {
-		$('.search-field').fadeToggle('fast').toggleClass('visible');
+	if($(window).width() > '768') {
+		$('.search-field').fadeToggle('fast');
+		$(window).resize(function(){
+			if($(window).width() < '768') {
+				$('.search-field').removeAttr('style');
+			}
+		});
 	}
-	return false;
+
+	// return false;
+});
+
+$(window).resize(function(){
+	if($(window).width() > '768')   {
+		$('.search-btn button').removeAttr('type', 'submit');
+	} else {
+		$('.search-btn button').attr('type', 'submit');
+	}
 });
 
 

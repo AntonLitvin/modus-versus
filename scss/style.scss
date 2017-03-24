@@ -1020,9 +1020,9 @@ button {
 		width: 180px;
 		.search-field {
 			position: static;
-			display: inline-block;
-			vertical-align: middle;
-			margin-top: 4px;
+			display: block;
+			float: left;
+			margin-top: 7px;
 			width: 130px;
 			padding: 0px;
 			border-bottom: none;
