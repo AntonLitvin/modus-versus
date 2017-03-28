@@ -621,7 +621,7 @@ button {
   background-color: rgba(0, 0, 0, 0.2);
   display: none;
 }
-.search-field input[type="text"] {
+.search-field input[type="search"] {
   background: #fff;
   width: 100%;
   padding: 4px;
