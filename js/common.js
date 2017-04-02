@@ -16,10 +16,10 @@ $(function () {
 
 //Show and hide searchform onclick
 $('.search-btn').on('click', function(){
-	if($(window).width() > '768') {
+	if($(window).width() >= '992') {
 		$('.search-field').fadeToggle('fast');
 		$(window).resize(function(){
-			if($(window).width() < '768') {
+			if($(window).width() <= '992') {
 				$('.search-field').removeAttr('style');
 			}
 		});

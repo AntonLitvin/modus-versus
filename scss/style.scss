@@ -938,6 +938,10 @@ button {
 
 @media (max-width: 991px) {
 
+	.search-field {
+		display: block;
+	}
+
 	.main-nav {
 		float: left;
 		margin-top: 10px;
