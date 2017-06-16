@@ -15,7 +15,7 @@ $(function () {
 
 
 //Show and hide searchform onclick
-$('.search-btn').on('click', function(){
+$('.search-btn').on('click', function(e){
 	if($(window).width() >= '992') {
 		$('.search-field').fadeToggle('fast');
 		$(window).resize(function(){
@@ -24,7 +24,7 @@ $('.search-btn').on('click', function(){
 			}
 		});
 	}
-	return false;
+	e.preventDefault();
 });
 
 $(window).resize(function(){
