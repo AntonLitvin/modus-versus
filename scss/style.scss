@@ -40,6 +40,39 @@ button {
 	list-style: none;
 }
 
+.theme-changer {
+	position: fixed;
+	z-index: 100;
+	width: 25px;
+	bottom: 60px;
+	left: 0;
+	font-size: 0;
+	a {
+		display: block;
+		width: 25px;
+		height: 25px;
+		transition: all 0.2s;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.theme-purple {
+	background-color: $purple;
+	border: 2px solid $blue;
+}
+
+.theme-teal {
+	background-color: $teal;
+	border: 2px solid $red;
+}
+
+.theme-green {
+	background-color: $green;
+	border: 2px solid $orange;
+}
+
 
 /*========== Header ==========*/
 

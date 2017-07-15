@@ -76,16 +76,16 @@ var mySwiper = new Swiper ('.swiper-container', {
 	}
 });
 
-
-//Add slideUp animation to dropdown
-//some trouble if navbar is collapsed
-// $('.portfolio').on('show.bs.dropdown', function(e){
-// 	$(this).find('.dropdown-menu').first().stop(true, true).show(200);
-// });
-
-// $('.portfolio').on('hide.bs.dropdown', function(e){
-// 	$(this).find('.dropdown-menu').first().stop(true, true).hide(200);
-// });
+//Theme color changer
+$('.theme-teal').on('click', function(){
+	$('#color-styles').attr('href', 'css/style-teal.css');
+});
+$('.theme-purple').on('click', function(){
+	$('#color-styles').attr('href', 'css/style-purple.css');
+});
+$('.theme-green').on('click', function(){
+	$('#color-styles').attr('href', 'css/style-green.css');
+});
 
 
 });

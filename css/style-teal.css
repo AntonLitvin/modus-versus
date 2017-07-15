@@ -73,6 +73,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -321,6 +323,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -359,6 +363,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -452,6 +458,8 @@ html, body {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -484,9 +492,43 @@ button {
   list-style: none;
 }
 
+.theme-changer {
+  position: fixed;
+  z-index: 100;
+  width: 25px;
+  bottom: 60px;
+  left: 0;
+  font-size: 0;
+}
+.theme-changer a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.theme-changer a:hover {
+  opacity: 0.8;
+}
+
+.theme-purple {
+  background-color: #a65980;
+  border: 2px solid #26b9e1;
+}
+
+.theme-teal {
+  background-color: #76c7c0;
+  border: 2px solid #e8645a;
+}
+
+.theme-green {
+  background-color: #70c570;
+  border: 2px solid #e36b2c;
+}
+
 /*========== Header ==========*/
 .header-bg {
-  background: #a65980 url("../img/rule-bottom.png") left bottom repeat-x;
+  background: #76c7c0 url("../img/rule-bottom.png") left bottom repeat-x;
 }
 .header-bg .header-wrapper {
   padding-top: 15px;
@@ -516,8 +558,8 @@ button {
 .navbar-custom {
   padding-top: 8px;
   margin-bottom: 15px;
-  background: #a65980;
-  border-color: #a65980;
+  background: #76c7c0;
+  border-color: #76c7c0;
   position: relative;
 }
 
@@ -531,7 +573,8 @@ button {
   margin-right: 20px;
   color: #fff !important;
   border-radius: 4px;
-  border-bottom: 3px solid #a65980;
+  border-bottom: 3px solid #76c7c0;
+  -webkit-transition: all ease-out 0.1s;
   transition: all ease-out 0.1s;
 }
 .main-nav > li:last-child > a {
@@ -542,13 +585,13 @@ button {
   border-bottom: 3px solid rgba(0, 0, 0, 0.25) !important;
 }
 .main-nav > li a:focus, .main-nav > li a:active {
-  background: #26b9e1 !important;
-  border-color: #1a98ba !important;
+  background: #e8645a !important;
+  border-color: #e23a2d !important;
 }
 
 #fb-contacts p {
   font-size: 13px;
-  color: #26b9e1;
+  color: #e8645a;
 }
 #fb-contacts p span {
   margin-left: 20px;
@@ -562,13 +605,13 @@ button {
 
 /*========== Dropdown submenu ==========*/
 .portfolio.open > a {
-  background: #26b9e1 !important;
-  border-color: #1a98ba !important;
+  background: #e8645a !important;
+  border-color: #e23a2d !important;
 }
 .portfolio .portfolio-dropdown-menu {
   width: 200px;
   margin-top: 12px !important;
-  background: #26b9e1;
+  background: #e8645a;
   border: none;
   border-radius: 4px !important;
   padding: 3px 0px;
@@ -578,7 +621,7 @@ button {
   border-top: 8px solid transparent;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
-  border-bottom: 8px solid #26b9e1;
+  border-bottom: 8px solid #e8645a;
   position: absolute;
   top: -15px;
   left: 10px;
@@ -593,10 +636,11 @@ button {
   color: #fff;
   font-size: 13px;
   background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
 .portfolio .portfolio-dropdown-menu a:hover {
-  background-color: #a65980;
+  background-color: #76c7c0;
   color: #fff;
 }
 
@@ -637,9 +681,10 @@ button {
   width: 33px;
   height: 33px;
   border-radius: 4px;
+  -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
-  background: #a65980;
-  border-bottom: 3px solid #a65980;
+  background: #76c7c0;
+  border-bottom: 3px solid #76c7c0;
 }
 .search-btn button i {
   color: #fff;
@@ -673,7 +718,7 @@ button {
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 800;
-  background: #26b9e1;
+  background: #e8645a;
   border-radius: 5px;
 }
 .main-slider p {
@@ -698,7 +743,7 @@ button {
   margin-right: 6px;
 }
 .carousel-indicators li.active {
-  background: #26b9e1;
+  background: #e8645a;
   width: 59px;
   height: 5px;
   margin-right: 6px;
@@ -712,13 +757,13 @@ button {
   display: block;
   width: 50px;
   height: 60px;
-  background: #26b9e1;
-  border-bottom: 3px solid #1991b1;
+  background: #e8645a;
+  border-bottom: 3px solid #e13224;
   line-height: 57px;
 }
 .carousel-control span:hover {
-  background: #1daad1;
-  border-color: #1786a4;
+  background: #e54f44;
+  border-color: #d72b1e;
 }
 .carousel-control.left {
   top: 44%;
@@ -779,12 +824,12 @@ button {
   width: 100%;
   text-align: center;
   border-radius: 5px;
-  background: #26b9e1;
-  border-bottom: 4px solid #1ca3c8;
+  background: #e8645a;
+  border-bottom: 4px solid #e4473b;
 }
 .services-header a:hover {
-  background: #1daad1;
-  border-color: #1a98ba;
+  background: #e54f44;
+  border-color: #e23a2d;
 }
 
 .services-item {
@@ -799,10 +844,12 @@ button {
   background: #f8f8f8;
   border-radius: 5px;
   border-bottom: 4px solid #e5e6e6;
+  -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
 .services-item span {
-  color: #a65980;
+  color: #76c7c0;
+  -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
 .services-item h3 {
@@ -831,28 +878,31 @@ button {
   width: 200px;
   text-align: center;
   border-radius: 5px;
-  background: #a65980;
-  border-bottom: 4px solid #8f4d6e;
+  background: #76c7c0;
+  border-bottom: 4px solid #5dbdb4;
+  -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
 .services-item:hover {
   background: #fff;
 }
 .services-item:hover span {
-  color: #26b9e1;
+  color: #e8645a;
 }
 .services-item:hover a {
-  background: #26b9e1;
-  border-bottom: 4px solid #1ca3c8;
+  background: #e8645a;
+  border-bottom: 4px solid #e4473b;
 }
 .services-item a:hover {
-  background: #1daad1;
-  border-color: #1a98ba;
+  background: #e54f44;
+  border-color: #e23a2d;
 }
 
 /*========== Why-modus ==========*/
 .why-modus {
   padding-bottom: 40px;
+  background: url(../img/rule-white-top.png) repeat-x, -webkit-gradient(linear, left top, left bottom, color-stop(400px, #ececec), color-stop(400px, #f3f3f3), to(#f3f3f3));
+  background: url(../img/rule-white-top.png) repeat-x, -webkit-linear-gradient(top, #ececec 400px, #f3f3f3 400px, #f3f3f3);
   background: url(../img/rule-white-top.png) repeat-x, linear-gradient(to bottom, #ececec 400px, #f3f3f3 400px, #f3f3f3);
 }
 
@@ -864,7 +914,7 @@ button {
 .why-modus-header h2 {
   font-size: 40px;
   font-weight: 600;
-  color: #26b9e1;
+  color: #e8645a;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -913,6 +963,7 @@ button {
 .why-modus-images .screen-2 .screen-bg {
   height: 360px;
   background: #C1C7C8;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 .why-modus-images img {
@@ -952,7 +1003,7 @@ button {
   color: #777777;
 }
 .why-choose li i {
-  color: #26b9e1;
+  color: #e8645a;
   margin-right: 5px;
 }
 
@@ -971,7 +1022,7 @@ button {
   margin-bottom: 55px;
 }
 .why-raiting p a {
-  color: #26b9e1;
+  color: #e8645a;
   text-decoration: underline;
 }
 .why-raiting p a:hover {
@@ -1007,11 +1058,11 @@ button {
   left: 0;
 }
 .why-raiting h2 .outer-cls .cls-1 {
-  fill: #a65980;
+  fill: #76c7c0;
   fill-rule: evenodd;
 }
 .why-raiting h2 .outer-cls .cls-2 {
-  fill: #26b9e1;
+  fill: #e8645a;
   fill-rule: evenodd;
 }
 
@@ -1093,6 +1144,7 @@ button {
   text-align: center;
   cursor: pointer;
   border-bottom: 3px solid #7f8c8c;
+  -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
 .happy-clients .buttons-select button i {
@@ -1100,8 +1152,8 @@ button {
   color: #fff;
 }
 .happy-clients .buttons-select button:hover {
-  background: #26b9e1;
-  border-color: #1991b1;
+  background: #e8645a;
+  border-color: #e13224;
 }
 .happy-clients .buttons-select .swiper-left {
   margin-right: 15px;
@@ -1125,7 +1177,7 @@ button {
 
 /*========== Footer ==========*/
 .page-footer {
-  background: #a65980 url("../img/rule-top.png") left top repeat-x;
+  background: #76c7c0 url("../img/rule-top.png") left top repeat-x;
 }
 
 .footer-top {
@@ -1371,7 +1423,7 @@ button {
     margin-right: 0;
   }
   .main-nav-btn.navbar-toggle:hover, .main-nav-btn.navbar-toggle:focus {
-    background-color: #854766;
+    background-color: #52b8af;
   }
   .main-nav-btn.navbar-toggle .icon-bar {
     background-color: #fff;
@@ -1382,7 +1434,7 @@ button {
   }
 
   .navbar-nav .open .portfolio-dropdown-menu {
-    background-color: #26b9e1;
+    background-color: #e8645a;
     position: relative;
   }
   .navbar-nav .open .portfolio-dropdown-menu a {
@@ -1390,7 +1442,7 @@ button {
     min-width: 238px;
   }
   .navbar-nav .open .portfolio-dropdown-menu a:hover {
-    background-color: #a65980 !important;
+    background-color: #76c7c0 !important;
   }
 
   .search-form {

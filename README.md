@@ -2,8 +2,7 @@
 
 Three color theme responsive design
 
-Changing color theme by change two color variables
-in _variables.scss and then compile into style.css
+To change color theme push the button left bottom corner
 
 Using Bootstrap, jQuery, SCSS, some plugins
 
