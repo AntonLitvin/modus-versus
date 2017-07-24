@@ -15,23 +15,26 @@ $(function () {
 
 
 //Show and hide searchform onclick
-$('.search-btn').on('click', function(e){
+$('.search-btn').on('click', function(){
+
+var searchField = $('.search-field');
+
 	if($(window).width() >= '992') {
-		$('.search-field').fadeToggle('fast');
-		$(window).resize(function(){
-			if($(window).width() <= '992') {
-				$('.search-field').removeAttr('style');
-			}
-		});
+		$(searchField).fadeToggle('fast');
 	}
-	e.preventDefault();
+
+	searchField.on('change', function(){
+		if((searchField.value !== "")) {
+			$('.js-search').submit();
+		}
+	});
+
 });
 
+
 $(window).resize(function(){
-	if($(window).width() > '768')   {
-		$('.search-btn button').removeAttr('type', 'submit');
-	} else {
-		$('.search-btn button').attr('type', 'submit');
+	if($(window).width() <= '992') {
+		$('.search-field').removeAttr('style');
 	}
 });
 
