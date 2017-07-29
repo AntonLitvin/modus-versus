@@ -1,9 +1,9 @@
 # modus-versus
 
-Three color theme responsive design
+[DEMO](https://antonlitvin.github.io/modus-versus/)
+
+Three color theme training responsive page
 
 To change color theme push the button left bottom corner
 
-Using Bootstrap, jQuery, SCSS, some plugins
-
-Demo: https://antonlitvin.github.io/modus-versus/
+Used Bootstrap, jQuery, SCSS, some plugins
